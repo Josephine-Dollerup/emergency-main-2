@@ -10,21 +10,23 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/burger.css">
   <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/forms.css">
   <link rel="icon" type="image/png" href="img/fav.png">
   <title>Emergency Site</title>
+  <link rel="icon" type="image/x-icon" href="img/svg/favicon4.svg">
 </head>
 
 <body id="register">
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"> <img src="img/svg/logot4.svg" alt="Forkortet logo"> </a>
       </div>
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
         <li><a class="menuItem" href="register.html">Indberet</a></li>
       </ul>
+      <button id="darkmode">Dark mode</button>
       <button class="burger">
         <span class="line"></span>
         <span class="line"></span>
@@ -34,43 +36,117 @@
   </header>
 
   <main>
-    <h1>INDBERET</h1>
-    <section id="form-section">
-      <article id="form-info">
-        <h2>Overskrift</h2>
-        <p>Tekst</p>
-      </article>
-      <form id="webform"></form>
-    </section>
-    <section id="form-summary">
-      <h2>Summary</h2>
-      <article>
-        <p class="placeholder">Opsummering</p>
-      </article>
-    </section>
+    <div class="re_grid_3-2">
+      <h1>INDBERET</h1>
+      <section id="form-section">
+        <article id="form-info">
+          <h2>Vi hjælper dig med at finde dit nye hamster hjem</h2>
+          <p>Udfyld dette skema, med dine inforamtion og svarer på spørgsmålene. Så kan vi hjælpe dig med din hamster
+            flugt og finde dig et nyt hjem!</p>
+        </article>
+        <form id="webform">
+          <fieldset>
+            <legend>
+              <h3>Personlige informationer</h3>
+            </legend>
+            <div class="form-group">
+              <label for="first_name">Fornavn</label>
+              <input aria-describedby="first_name-error" type="text" id="first_name" name="first_name" required />
+              <p class="error-message" id="first_name-error">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="last_name">Din families navn</label>
+              <input aria-describedby="last_name-error" type="text" id="last_name" name="last_name" required />
+              <p class="error-message" id="last_name-error">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="Adresse">Nuværende Adresse</label>
+              <input aria-describedby="adress-error" type="adress" id="adress" name="adress" required />
+              <p class="error-message" id="adress-error">Please enter a value</p>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Hamster informationer</h3>
+            </legend>
+
+            <div class="form-group">
+              <p class="gender">Dit køn</p>
+              <label for="køn">
+                <input aria-describedby="sex-instruction sex-error" id="køn" type="radio" name="køn" value="han"
+                  required>
+                Han
+              </label>
+              <label for="køn">
+                <input aria-describedby="sex-instruction sex-error" id="køn" type="radio" name="køn" value="han">
+                Hun
+              </label>
+
+            </div>
+            <!-- <div class="form-group">
+
+              <p class="error-message" id="adress-error">Please choose a value</p>
+            </div> -->
+            <div>
+              <label for="pet-select">Din race</label>
+
+              <select id="pet-select" name="pet" aria-describedby="race-instruction race-error" value="race" required>
+                <option value="">--Vælg din race--</option>
+                <option value="hamster1">Campbells dværghamster</option>
+                <option value="hamster2">Vinterhvid dværghamster</option>
+                <option value="hamster2">Roborovski dværghamster</option>
+              </select>
+              <p class="error-message" id="adress-error">Please choose a value</p>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="terms">
+              <input aria-describedby="accept_terms-error" type="checkbox" id="terms" name="accept_terms" value="yes"
+                required />
+              Accept terms
+            </label>
+            <p class="error-message" id="accept_terms-error">Please check of the box</p>
+          </div>
+
+
+          <button>Sign up</button>
+        </form>
+      </section>
+      <section id="form-summary">
+        <h2>Summary</h2>
+        <article>
+          <p class="placeholder">Opsummering</p>
+          <p>First name: <span id="first_output"></span></p>
+          <p>Last name: <span id="last_output"></span></p>
+          <p>Adresse: <span id="adresse_output"></span></p>
+          <p>Køn: <span id="køn"></span></p>
+          <p>Race: <span id="køn"></span></p>
+          <p>Terms accepted: <span id="terms_output"></span></p>
+
+        </article>
+      </section>
+    </div>
   </main>
   <footer>
     <nav>
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><a href="#">Kontakt os</a></li>
+        <li><a href="#">Om os </a></li>
+        <li><a href="#">WWW.hasmterflugten.dk</a></li>
       </ul>
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+
       </ul>
     </nav>
   </footer>
+  <script src="js/dark.js"></script>
+  <script src="js/form.js"></script>
 </body>
 
 </html>

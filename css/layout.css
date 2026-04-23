@@ -12,6 +12,16 @@ main {
 main > *:not(:first-child) {
   margin: 0 1rem;
 }
+#instruction main,
+#register main {
+  display: grid;
+  row-gap: 1rem;
+}
+#instruction main > *:not(:first-child),
+#register main > *:not(:first-child) {
+  margin: 0 1rem;
+}
+
 main {
   grid-template-rows: min-content min-content 1fr min-content;
 }
@@ -21,13 +31,13 @@ main {
 /* LAYOUT FOR HEADER AND FOOTER */
 footer {
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
 }
 
 header {
   grid-row: 1;
   display: grid;
-  grid-template-columns: 1fr minmax(300px, 1200px) 1fr;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
 }
 header nav,
 footer nav {
@@ -35,6 +45,7 @@ footer nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid black;
 }
 header nav > * {
   flex: 1;
@@ -53,7 +64,54 @@ footer ul {
   padding-left: 1rem;
 }
 
+.fuldelogo {
+  display: grid;
+  grid-column: 1/2;
+}
+
 /* LAYOUT FOR SECTIONS */
+
+#frontpage main {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
+}
+#frontpage main > * {
+  grid-column: 2/3;
+}
+
+#frontpage .fuldwidth {
+  background-color: red;
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
+}
+
+#frontpage .fuldwidth > * {
+  grid-column: 1/-1;
+}
+
+/* den rød farve skal være hvid */
+.grid_3-2 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+}
+.boks_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.boks_1-1 p {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.artikel_1-1-1 {
+  display: grid;
+}
+.artikel_1-1-1 :popover-open img {
+  margin-block: 1.5rem;
+}
 
 @media (width > 600px) {
   #instruction > main,
@@ -69,4 +127,41 @@ footer ul {
   h1 {
     grid-column: 1 / -1;
   }
+}
+
+/* register style */
+#register main {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
+}
+#register main > * {
+  grid-column: 2/3;
+}
+
+.re_grid_3-2 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+}
+
+/* Introduktion style - dette skal måske bruges*/
+#instruction main {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 1000px) 1fr;
+}
+#instruction main > * {
+  grid-column: 2/3;
+}
+
+.in_grid_3-2 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 10px;
+}
+.intro_tekst {
+  border: 2px solid var(--color-stoke);
+  padding: 10px;
+  text-align: center;
+  margin-inline: 8rem;
+  color: var(--color-stoke);
 }

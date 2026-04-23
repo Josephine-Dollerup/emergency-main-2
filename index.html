@@ -12,18 +12,20 @@
   <link rel="stylesheet" href="css/cards.css">
   <link rel="icon" type="image/png" href="img/fav.png">
   <title>Emergency Site</title>
+  <link rel="icon" type="image/x-icon" href="img/svg/favicon4.svg">
 </head>
 
 <body id="frontpage">
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"> <img src="img/svg/logot4.svg" alt="Forkortet logo"> </a>
       </div>
       <ul class="menu">
         <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
         <li><a class="menuItem" href="register.html">Indberet</a></li>
       </ul>
+      <button id="darkmode">Dark mode</button>
       <button class="burger">
         <span class="line"></span>
         <span class="line"></span>
@@ -34,30 +36,209 @@
 
   <main>
 
+    <div class="grid_3-2">
+      <div>
+        <section>
+          <h1 class="fuldelogo"><img src="img/svg/fuldelogo.svg" alt="Fulde logo"></h1>
+          <div class="boks_1-1">
+            <img src="img/billed1.webp" alt="billed til første artikel">
+            <div class="bokse">
+              <h2>Sådan flygter du fra dit bur og ud i friheden!</h2>
+              <p>Hvis du drømmer om at flygte fra dit bur, så hjælper vi dig! Her er en guide med de reskaber du skal
+                bruge.</p>
+              <a href="instruction.html">Læs mere</a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div class="boks_1-1">
+              <img src="img/billed2.webp" alt="Billed2">
+              <div class="bokse">
+                <h2>Skal du have hjælpe til dit nye hamster hjem?</h2>
+                <p>Hvis du er ulykkelig, så hjælper vil dig med at finde et nyt hjem. Udfylde skemaet...</p>
+                <a href="register.html">Læs mere</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="artikel_1-1-1">
+        <h2 class="Breaking">Breaking news</h2>
+        <article class="artikel1">
+          <h2>Sådan får du en blød pels</h2>
+          <img src="img/billed1.webp" alt="billed til første artikel">
+          <p>Hvis du vil sikre, at dit hamster har det godt og samtidig ser sundt ud, er der flere ting gør DU ændre
+            vaner...</p>
+          <button popovertarget="artikel1_popover">Læs mere</button>
+          <div id="artikel1_popover" popover>
+            <button popovertarget="artikel1_popover">Luk</button>
+            <h2>Breaking news</h2>
+            <h3>Sådan får du en blød pels</h3>
+            <h4>Guide: Sådan får du dit hamster til at få en blød og sund pels</h4>
+            <p>
+
+              En blød og skinnende pels er et tegn på, at dit hamster trives. Hvis pelsen virker tør, fedtet eller mat,
+              kan det være
+              et signal om, at noget i plejen skal justeres. Her får du en enkel guide til, hvordan du sikrer dit
+              hamster den bedst
+              mulige pels.
+              <br><br>
+              1. Giv den rigtige kost
+              Kosten er afgørende for pelsens kvalitet. Sørg for et varieret foder med frø, korn og protein. Du kan
+              supplere med små
+              mængder grøntsager som gulerødder og broccoli. Proteinkilder som kogt æg eller melorme kan også hjælpe med
+              at styrke
+              pelsen.
+              <br><br>
+              2. Sørg for frisk vand hver dag
+              Dehydrering kan påvirke både hud og pels. Sørg altid for, at dit hamster har adgang til rent og frisk
+              vand.
+              <br><br>
+              3. Brug sandbad – ikke vand
+              Hamstre må ikke bades i vand, da det kan skade deres naturlige olier. I stedet skal du give dit hamster et
+              sandbad med
+              fint chinchillasand. Det hjælper med at holde pelsen ren og blød.
+              <br><br>
+              4. Hold buret rent
+              Et beskidt bur kan føre til fedtet og dårlig pels. Rengør buret jævnligt og fjern snavset strøelse, så dit
+              hamster lever
+              i et rent miljø.
+              <br><br>
+              5. Undgå stress
+              Stress kan påvirke pelsens tilstand. Sørg for, at dit hamster har gemmesteder, ro og en fast rutine, så
+              det føler sig
+              trygt.
+              <br><br>
+              6. Tjek for sygdom eller parasitter
+              Hvis pelsen bliver tynd, ujævn eller falder af, kan det skyldes sygdom eller parasitter. I så fald bør du
+              kontakte en
+              dyrlæge.
+              <br><br>
+              7. Giv plads til naturlig pleje
+              Hamstre er gode til selv at pleje deres pels. Sørg for, at dit hamster har tid og ro til at vaske sig selv
+              uden
+              forstyrrelser.
+              <br><br>
+              Konklusion
+              En blød hamsterpels handler om god pleje, sund kost og et trygt miljø. Med de rette vaner kan du sikre, at
+              dit hamster
+              både ser sundt ud og har det godt.
+            </p>
+            <img src="img/billed1.webp" alt="billed til første artikel">
+          </div>
+        </article>
+        <article class="artikel2">
+          <h2>Byen invaderet af hamstre: Mystisk flugt sender tusindvis på gaden</h2>
+          <p>Det startede som små hændelser: et bur, der ikke var lukket ordentligt, et hamster der forsvandt i løbet af
+            natten...</p>
+          <button popovertarget="artikel2_popover">Læs mere</button>
+          <div id="artikel2_popover" popover>
+            <button popovertarget="artikel2_popover">Luk</button>
+            <h2>Breaking news</h2>
+            <h3>Byen invaderet af hamstre: Mystisk flugt sender tusindvis på gaden</h3>
+            <p>Det startede som små hændelser: et bur, der ikke var lukket ordentligt, et hamster der forsvandt i
+              løbet
+              af
+              natten. Men
+              nu sker det overalt. Kæledyrsejere melder om tomme bure og samtidig bliver flere og flere hamstre set
+              i
+              gaderne.
+              Vidner fortæller om små flokke, der bevæger sig gennem byen, som om de ved, hvor de skal hen. Det
+              virker
+              ikke længere
+              tilfældigt.
+              Eksperter peger på dårlige bure og små åbninger, men det forklarer ikke, hvorfor så mange hamstre
+              slipper
+              ud
+              på samme
+              tid. Flere begynder at spekulere: flygter de med vilje?
+              Udenfor er livet farligt. Hamstre er ikke skabt til byen og risikerer hurtigt at komme til skade.
+              Dyreværnsorganisationer opfordrer derfor folk til at hjælpe, hvis de finder et.
+              Men spørgsmålet hænger stadig i luften: Hvor kommer de alle fra og hvorfor stopper det ikke?
+              Måske er det ikke bare flugt. Måske er det begyndelsen på noget større</p>
+            <img src="img/billed1.webp" alt="billed til første artikel">
+          </div>
+        </article>
+        <article class="artikel3">
+          <h2>Hamster på flugt skaber kaos i boligblok</h2>
+          <img src="img/billed3.webp" alt="billed3">
+          <p>Flere beboere meldte om små dyr i opgangene. En løs hamster viste sig at være starten på flere flugter.
+            Ejere kæmper
+            nu med at finde deres kæledyr. Situationen har skabt uro blandt naboerne.</p>
+          <button popovertarget="artikel3_popover">Læs mere</button>
+          <div id="artikel3_popover" popover>
+            <button popovertarget="artikel3_popover">Luk</button>
+            <h2>Breaking news</h2>
+            <h3>Hamster på flugt skaber kaos i boligblok</h3>
+            <p>En tilsyneladende uskyldig hændelse har udviklet sig til et mindre kaos i en boligblok, hvor flere
+              beboere de seneste
+              dage har rapporteret om små, løse dyr i opgangene. Det hele begyndte med én hamster på afveje – men
+              situationen viste
+              sig hurtigt at være mere omfattende.
+              <br>
+              <br>
+              Flere beboere fortæller, at de først troede, der var tale om en enkelt undsluppen hamster. Men efter
+              gentagne
+              observationer i forskellige opgange begyndte mistanken at vokse: Der var tale om flere dyr på fri fod.
+              <br>
+              “Jeg så en lille hamster løbe hen over trappeafsatsen, og jeg troede ærligt talt, det var en andens
+              kæledyr, der lige
+              var stukket af,” fortæller en beboer. “Men dagen efter så min nabo en i den anden ende af bygningen.”
+              <br>
+              <br>
+              Ifølge flere af de berørte beboere stammer de løsslupne hamstre fra forskellige lejligheder. Nogle ejere
+              har erkendt, at
+              deres kæledyr er sluppet ud af bure, mens andre først blev opmærksomme på situationen, da naboerne
+              begyndte at dele
+              billeder og observationer.
+              <br>
+              Situationen har skabt både bekymring og frustration blandt beboerne. Nogle frygter, at dyrene kan tage
+              skade eller gemme
+              sig i utilgængelige områder, mens andre er generede af uroen og de uventede “besøg” i opgangene.
+              <br>
+              “Det er synd for dyrene, men det er også lidt utrygt ikke at vide, hvad man støder på i opgangen,” siger
+              en beboer.
+              <br>
+              <br>
+              Ejere af de forsvundne hamstre arbejder nu på højtryk for at finde deres kæledyr igen. Der er blevet sat
+              fælder op med
+              mad, og flere har delt opslag i håb om at lokalisere dyrene.
+              <br>
+              Eksperter understreger, at hamstre er hurtige og gode til at gemme sig, hvilket kan gøre dem svære at
+              fange igen.
+              Samtidig opfordres kæledyrsejere til at sikre bure og omgivelser bedre for at undgå lignende situationer i
+              fremtiden.
+              <br>
+              Indtil videre er enkelte hamstre blevet fundet og bragt sikkert tilbage til deres ejere, men flere er
+              stadig på fri fod.
+              Beboerne håber nu på en snarlig løsning – og på, at roen igen kan vende tilbage til opgangene.
+            </p>
+            <img src="img/billed3.webp" alt="billed3">
+          </div>
+        </article>
+      </section>
+    </div>
   </main>
 
   <footer>
     <nav>
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><a href="#">Kontakt os</a></li>
+        <li><a href="#">Om os </a></li>
+        <li><a href="#">WWW.hasmterflugten.dk</a></li>
       </ul>
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+
       </ul>
     </nav>
   </footer>
+  <script src="js/dark.js"></script>
 </body>
+
+
 
 </html>

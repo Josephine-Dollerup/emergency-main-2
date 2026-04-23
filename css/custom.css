@@ -1,22 +1,28 @@
 :root {
+  color-scheme: light dark;
   /* Background color */
-  --color-bg: #cfceca;
+  --color-bg: light-dark(#f0f0f0, #c9c2c2);
 
   /* Header background color */
-  --color-head-bg: #625e5c;
+  --color-head-bg: light-dark(#ffc943, #d4a62a);
 
+  /* farver dark mode */
+  --color-dark-light: light-dark(#d4a62a, #ffc943);
   /* Logotype */
-  --color-logotype-bg: #2a2828;
-  --color-text-logotype: #c1bfb8;
+  --color-logotype-bg: light-dark (#f0f0f0, #c9c2c2);
+  --color-text-logotype: #000000; /* LOGO-TYPE */
   --font-logotype-size: 1rem;
 
   /* Global menu */
-  --color-menu-bg: #5a5b5e;
+  --color-menu-bg: light-dark(#f0f0f0, #c9c2c2); /* Nærkontakt og indberet */
   /* Links */
-  --color-link-bg: #78766e;
-  --color-link-hover: #fff;
-  --color-link-active: #99958f;
+  --color-link-bg: light-dark(#ffecbd, #bfa76a); /* Nærkontakt og indberet */
+  --color-link-hover: light-dark(#bfa76a, #ffecbd); /* Når man trykker på dem */
+  --color-link-active: #000000; /* Tekstens farve*/
   --border-radius-links: 1px;
+
+  /* Titler med rød */
+  --color-titel: light-dark(#821b1c, #e05a5c); /* rundt om h2 og artikler h3'er*/
 
   /* Headlines (size)*/
   --font-h1-size: 1rem;
@@ -28,12 +34,14 @@
   --font-sub1-size: 1rem;
 
   /* Headlines (color) */
-  --color-headline-bg: #4b4545;
+  --color-headline-bg: light-dark(#df887b, #bd6b5e;) /* Overskrift over into bokse/
 
-  /* Tekst */
-  --color-text: #000;
-  --color-text-inverted: #cdccc4;
+  /* Tekst */ --color-text: light-dark(#000000, #ffffff);
+  --color-text-inverted: light-dark(#000000, #121212);
 
+  /* Artikler i siden og artikel titel*/
+  --color-artikel-bg: light-dark(#abcdd7, #6f8f99);
+  --color-artikel-txt: light-dark(#f0f0f0, #c9c2c2);
   /* Andet tekst */
   --followup-text-size: 1rem;
 
@@ -45,8 +53,8 @@
 
   /* Cards */
   --color-card-bg: #e3e1d8;
-  --color-card-bg-inverted: #4d4e4f;
-  --color-cta-card-bg: #847f7e;
+  --color-card-bg-inverted: light-dark (#821b1c, #e05a5c); /* ved ikke hvad det gør*/
+  --color-cta-card-bg: light-dark(#f0f0f0, #c9c2c2);
   --color-cta-card-bg-inverted: #c0bfb9;
 
   /* Fonts & font weights*/
@@ -57,5 +65,248 @@
   --font-weight-light: 200;
 
   /* Infographics background colors*/
-  --color-info-bg: #676161;
+  --color-info-bg: light-dark(#abcdd7, #6f8f99);
+
+  /* stroke på links */
+  --color-stoke: light-dark(#000000, #121212);
+
+  /* Omvendt light og dark */
+  --color-ov-blue: light-dark(#6f8f99, #abcdd7);
+  --color-ov-gul: light-dark(#d4a62a, #ffc943);
+  --color-ov-rød: light-dark(#e05a5c, #821b1c);
+  --color-ov-LG: light-dark(#bfa76a, #ffecbd);
+}
+/* DESIGN PÅ FORSIDEN */
+
+.logo img {
+  width: 200px; /* justér som du vil */
+  height: auto;
+}
+
+.grid_3-2 a:link {
+  border-radius: 20px;
+  border: 1px solid var(--color-link-bg);
+  background-color: var(--color-link-bg);
+  padding: 5px;
+}
+
+/* bokse  */
+.boks_1-1 {
+  border: 2px solid var(--color-artikel-bg);
+  background-color: var(--color-artikel-bg);
+  border-radius: 15px;
+  padding: 25px;
+}
+.bokse h2 {
+  font-size: 1.2rem;
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  padding: 5px;
+}
+.bokse a {
+  margin-inline: 4.5rem;
+  background-color: var(--color-link-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-stoke);
+}
+
+/* ANIMATIONER */
+
+.menu li:first-child {
+  animation: wiggle_kf 2s ease-out both infinite;
+}
+
+@keyframes wiggle_kf {
+  /* Pause */
+  0%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  /* Ryst */
+  75% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  85% {
+    transform: rotate(-3deg);
+  }
+  90% {
+    transform: rotate(3deg);
+  }
+}
+
+.menu li:last-child {
+  animation: wiggle_kf 2s ease-out both infinite;
+}
+
+@keyframes wiggle_kf {
+  /* Pause */
+  0%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  /* Ryst */
+  75% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  85% {
+    transform: rotate(-3deg);
+  }
+  90% {
+    transform: rotate(3deg);
+  }
+}
+
+/* ARTIKLER */
+.artikel_1-1-1 {
+  border: 2px solid var(--color-artikel-bg);
+  background-color: var(--color-artikel-bg);
+  margin: 2rem;
+  border-radius: 15px;
+  gap: 10px;
+}
+
+.Breaking {
+  font-size: 2rem;
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  text-align: center;
+  padding: 10px;
+  color: var(--color-artikel-txt);
+}
+.artikel_1-1-1 h2 {
+  font-size: 1.5rem;
+}
+.artikel1 {
+  display: grid;
+  border: 2px solid var(--color-head-bg);
+  background-color: var(--color-head-bg);
+  gap: 10px;
+  padding: 15px;
+}
+.artikel2 {
+  display: grid;
+  border: 2px solid var(--color-link-bg);
+  background-color: var(--color-link-bg);
+  gap: 10px;
+  padding: 15px;
+}
+.artikel3 {
+  display: grid;
+  gap: 10px;
+  border: 2px solid var(--color-head-bg);
+  background-color: var(--color-head-bg);
+  padding: 15px;
+}
+.artikel_1-1-1 button {
+  border-radius: 10px;
+  background-color: var(--color-artikel-txt);
+  color: var(--color-link-active);
+  padding: 2px;
+  cursor: pointer;
+  border: 2px solid var();
+}
+/* pop-up artikler */
+/* artikel 1 */
+#artikel1_popover {
+  gap: 10px;
+}
+#artikel1_popover h2 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  text-align: center;
+  font-size: 3rem;
+}
+#artikel1_popover h3 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* artikel 2 */
+#artikel2_popover {
+  gap: 10px;
+}
+#artikel2_popover h2 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  text-align: center;
+  font-size: 3rem;
+}
+#artikel2_popover h3 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+/* artikel 3 */
+#artikel3_popover {
+  gap: 10px;
+}
+#artikel3_popover h2 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  text-align: center;
+  font-size: 3rem;
+}
+#artikel3_popover h3 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+/* Links */
+/* #bokse a href{
+
+} */
+
+/* Artikler - popover */
+[popover] {
+  padding: 1rem;
+  margin: auto;
+  max-height: 80vh;
+  max-width: 80vw;
+  width: 40ch;
+  border-radius: 15px;
+}
+
+[popover] button {
+  position: sticky;
+  top: 0;
+  justify-self: end;
+}
+
+:popover-open {
+  display: grid;
+}
+
+::backdrop {
+  backdrop-filter: blur(15px);
+}
+
+html.dark {
+  color-scheme: dark;
 }

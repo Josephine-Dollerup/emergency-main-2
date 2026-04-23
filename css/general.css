@@ -3,9 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* den rød linje i toppen */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: red;
+  block-size: 4px;
+  animation: site-progress linear both 2s;
+  animation-timeline: scroll();
+  transform-origin: 0 0;
+  z-index: 1000;
+}
+
+@keyframes site-progress {
+  from {
+    scale: 0 1;
+  }
+}
+
 body {
   font-family: var(--font-family-sans);
   color: var(--color-text);
+}
+main {
   background-color: var(--color-bg);
 }
 header {
@@ -43,9 +65,15 @@ h1 {
 #register h1 {
   margin: 40px 0 20px 0;
   padding: 15px 30px;
-  background-color: var(--color-head-bg);
-  font-size: var(--font-h2-size);
+  background-color: var(--color-titel);
+  color: var(--color-artikel-txt);
 }
+#frontpage h1 {
+  font-size: 3rem;
+  margin-block: 3rem 2rem;
+  text-align: center;
+}
+
 #instruction p {
   grid-column: 1/-1;
   margin-bottom: 20px;
@@ -81,13 +109,44 @@ nav a {
   text-decoration: none;
   color: var(--color-text);
 }
+
+/* dark mode knap - efter links i meni */
+#darkmode {
+  margin-right: 1.5rem;
+  background-color: var(--color-link-hover);
+  color: var(--color-link-active);
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid var(--color-stoke);
+}
+/* Animation på dakrmode knap*/
+#darkmode {
+  animation: blink step-end 5s infinite;
+}
+@keyframes blink {
+  0% {
+    background-color: var(--color-ov-blue);
+  }
+  25% {
+    background-color: var(--color-ov-gul);
+  }
+  50% {
+    background-color: var(--color-ov-rød);
+  }
+  75% {
+    background-color: var(--color-ov-LG);
+  }
+}
+
 /* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
 #logotype-wrapper {
   background-color: var(--color-logotype-bg);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  /* height: 3.6rem; */
 }
 #logotype-wrapper > a {
   color: var(--color-text-logotype);
@@ -98,12 +157,13 @@ nav a {
 }
 /* Global menu */
 header nav li a {
-  margin: 1.5rem;
+  margin: 1rem;
   background-color: var(--color-link-bg);
   color: var(--color-text);
-  font-size: var(--followup-text-size);
+  font-size: 1rem;
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius-links);
+  border-radius: 10px;
+  border: 2px solid var(--color-stoke);
 }
 /* Pilen efter menu-tekst */
 header > nav li > a:after {
@@ -124,4 +184,10 @@ footer {
 
 footer a {
   font-size: 0.7rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

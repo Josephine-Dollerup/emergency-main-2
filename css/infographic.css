@@ -5,18 +5,23 @@
 .info-text {
   background-color: var(--color-info-bg);
   padding: 20px 0;
+  border: 2px solid var(--color-stoke);
+}
+.info-text h2 {
+  border: 2px solid var(--color-titel);
+  background-color: var(--color-titel);
+  text-align: center;
+  color: var(--color-artikel-txt);
+  line-height: 3rem;
+  margin-bottom: 1rem;
 }
 .info-graphic {
   border-radius: 0;
-  margin: 60px auto 80px auto;
 }
-.info-text h2 {
-  line-height: 3rem;
-  text-align: center;
-  background-color: var(--color-headline-bg);
-  color: var(--color-text);
-  margin-bottom: 1rem;
+.info-grafic svg {
+  width: 100%;
 }
+
 .info-text h3 {
   font-size: 0.8rem;
   line-height: 0.8rem;
@@ -34,9 +39,29 @@
   padding: 0;
 }
 .info-box {
-  padding: 1.5rem 1rem 0.5rem 1rem;
-  background-color: var(--color-card-bg);
+  background-color: var(--color-head-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-stoke);
 }
-.info-box:nth-of-type(2n) {
-  background-color: var(--color-card-bg-inverted);
+#requirement {
+  margin-top: 1rem;
+}
+
+.hide {
+  visibility: hidden;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s linear;
 }
