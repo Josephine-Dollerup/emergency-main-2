@@ -75,12 +75,11 @@
             <div class="form-group">
               <p class="gender">Dit køn</p>
               <label for="han">
-                <input aria-describedby="sex-instruction sex-error" id="han" type="radio" name="køn" value="han"
-                  required>
+                <input id="han" type="radio" name="køn" value="han" required>
                 Han
               </label>
               <label for="hun">
-                <input aria-describedby="sex-instruction sex-error" id="hun" type="radio" name="køn" value="hun">
+                <input id="hun" type="radio" name="køn" value="hun">
                 Hun
               </label>
 
@@ -92,7 +91,8 @@
             <div>
               <label for="pet-select">Din race</label>
 
-              <select id="pet-select" name="pet" aria-describedby="race-instruction race-error" required>
+              <select aria-describedby="adress-error" id="pet-select" name="pet"
+                aria-describedby="race-instruction race-error" required>
                 <option value="">--Vælg din race--</option>
                 <option value="hamster1">Campbells dværghamster</option>
                 <option value="hamster2">Vinterhvid dværghamster</option>
@@ -104,8 +104,7 @@
 
           <div class="form-group">
             <label for="terms">
-              <input aria-describedby="accept_terms-error" type="checkbox" id="terms" name="accept_terms" value="yes"
-                required />
+              <input type="checkbox" id="terms" name="accept_terms" value="yes" required />
               Accept terms
             </label>
             <p class="error-message" id="accept_terms-error">Please check of the box</p>
